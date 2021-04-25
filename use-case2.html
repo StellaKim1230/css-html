@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        padding: 10px;
+      }
+      .container {
+        text-align: center;
+      }
+      .container::after {
+        display: table;
+        content: '';
+        clear: both;
+      }
+      .float1 {
+        float: left;
+      }
+      .float2 {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="float1">float1</div>
+      <div class="float2">float2</div>
+    </div>
+    <div>이 부분은 float 아래에 위치해야 한다.</div>
+  </body>
+</html>

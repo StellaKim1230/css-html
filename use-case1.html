@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      /* transform을 이용한 중앙 정렬 */
+      .container {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid grey;
+      }
+
+      /* flex를 이용한 중앙 정렬 */
+      .wrap-flex {
+        min-height: 100vh;
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box-flex {
+        width: 160px;
+        border: 1px solid;
+        background: #ff6e6c;
+        text-align: center;
+      }
+
+      /* 그리드를 이용한 중앙정렬 */
+      .wrap-grid {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background: white;
+      }
+      .box-grid {
+        font-size: 12px;
+        padding: 30px;
+        background: #ff6e6c;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container"></div> -->
+    <!-- <div class="wrap-flex">
+      <div class="box-flex">flex box<br />수직/수평 중앙 정렬</div>
+    </div> -->
+    <div class="wrap-grid">
+      <div class="box-grid">grid box<br />수직/수평 중앙 정렬</div>
+    </div>
+  </body>
+</html>

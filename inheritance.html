@@ -1,0 +1,38 @@
+<!-- css 우선순위 > 스타일 상속 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      #inherit {
+        background-color: #bd6767;
+        color: blueviolet;
+      }
+
+      #font-style {
+        color: red;
+      }
+
+      h1 {
+        color: blue;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="inherit">
+      <p>스타일 지정 안함</p>
+      <p id="font-style">스타일 지정</p>
+
+      <div>
+        <ul>
+          <li>자식 1</li>
+          <li>자식 2</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

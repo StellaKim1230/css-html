@@ -1,0 +1,106 @@
+<!-- css 선택자  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      #selector {
+        background-color: lemonchiffon;
+      }
+
+      span.orange {
+        /*일치 선택자, span태그의 orange 클래스*/
+        color: orange;
+      }
+
+      div .orange {
+        /*div의 후손요소중에서 orange 클래스*/
+        color: pink;
+      }
+
+      ul > .orange {
+        /*ul의 자식요소중에서 orange 클래스*/
+        color: red;
+      }
+      .orange + li {
+        /*인접 형제 선택자*/
+        color: grey;
+      }
+      .pseudo-selector:active {
+        background-color: lightblue;
+      }
+      .pseudo-selector:hover {
+        background-color: lightpink;
+      }
+      .pseudo-selector:focus {
+        background-color: lightcoral;
+      }
+
+      /* 구조적 가상 선택자 */
+      :root {
+        background-color: lightgreen;
+      }
+      .structure-pseudo-selector > li:first-child {
+        color: red;
+      }
+      .structure-pseudo-selector > li:last-child {
+        color: yellow;
+      }
+
+      /* 2번째 */
+      ol:nth-child(2) {
+        color: yellow;
+      }
+      /* 2의 배수 */
+      ol :nth-child(2n) {
+        color: purple;
+      }
+      /* 짝수 */
+      ol :nth-child(even) {
+        color: yellow;
+      }
+      /* 5번째부터 시작하여 2의 배수 */
+      ol :nth-child(2n + 5) {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="selector">
+      <ul>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>딸기</li>
+      </ul>
+      <div>당근</div>
+      <p>토마토</p>
+      <span class="orange">오렌지</span>
+      <p class="orange">오렌지</p>
+    </div>
+    <span class="orange">오렌지</span>
+    <button class="pseudo-selector">pseudo-selector</button>
+
+    <!-- 구조적 가상 선택자 -->
+    <p>구조적 가상 선택자</p>
+    <ul class="structure-pseudo-selector">
+      <li>red</li>
+      <li>not red</li>
+      <li>not red</li>
+      <li>yellow</li>
+    </ul>
+
+    <ol>
+      <li>Hyo-jeong</li>
+      <li>Mi-mi</li>
+      <li>You-a</li>
+      <li>Seung-hee</li>
+      <li>Ji-ho</li>
+      <li>Bi-nie</li>
+      <li>A-rin</li>
+    </ol>
+  </body>
+</html>
